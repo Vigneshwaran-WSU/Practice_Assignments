@@ -1,0 +1,71 @@
+Question 1:  
+
+ANS) 
+
+RDBMS is a Relational database management system. RDBMS is an advanced version of DBMS where the data is stored in the form of tables. 
+
+Advantages of Database Management system over file system: 
+1) Data Redundancy and inconsistency.
+
+Explanation: There might be different files of same data, So in case of filesystem changes something in a single file will not affect 
+the same changes in the other files, but incase of a DBMS changing something in a one repository of data and multiple users can use it.
+
+2) Data Integrity:
+When we insert new data into the database, we require some specific constraints on the data like integer or not null, etc. The file system does not provide any system to check the constraints, whereas DBMS has the functionality to check the constraints on the data, and it allows user defined data types.
+
+3) Data Security:
+In the file system, we have only password protection to save the files and data, but it is not reliable. In DBMS, we have special algorithms and features to secure the data.
+
+4) Data Integrity:
+When we insert new data into the database, we require some specific constraints on the data like integer or not null, etc. The file system does not provide any system to check the constraints, whereas DBMS has the functionality to check the constraints on the data, and it allows user defined data types. 
+
+5) System Crashing:
+There are various reasons by which our system can crash. Once a system crashes, the file system loses all its files and data, and we can not recover it again. But DBMS has a recovery manager which can recover the data if the system crashes.
+
+6) Data Searching:
+To search the data in a file system, we have to write a specific program and run it. In DBMS, we have query languages by which we can write small queries to get the data we want from the database. We can use various query languages, like MySQL, Oracle, etc., for a database to search and retrieve the data.
+
+Question 2:
+
+ANS)  The ACID properties in the database are Atomicity, Consistency, Isolation, and Durability 
+Atomicity- Ensures that the transaction happens entirely or nothing happened. 
+Consistency- Ensures that the data is valid before and after the transaction. 
+Isolation - Ensures that multiple transactions can happen simultaneously without any interference. 
+Durability - Ensures that once the transactions are committed it is permanent even if the system fails the changes in transactions are stored permanently. 
+
+
+Question 3: 
+ANS)
+
+Normalization is the process of avoiding redundancy among the data in the table which results in anomalies. 
+Redundancy in relation may cause insertion, deletion, and update anomalies.
+
+question 4: 
+ANS)
+
+The types of query languages used in relational databases are DQL, DDL,  DML, DCL. 
+DQL- Data query language - Select.
+DDL- Data definition language - Alter, create, drop.
+DML- Data Manipulation Language - Insert, update, delete.  
+DCL - Data Control Language - Grant, Revoke. 
+
+question 5: 
+
+ANS)
+
+While a primary key and a composite key might do the same things, the primary key will consist of one column, whereas the composite key will consist of two or more columns
+The primary key uniquely identifies the employee ID, which correlates to a specific employee. Driver's license number. Driver's licenses are examples of primary keys, as they can officially identify each user as a licensed driver and their street address in the Department of Motor Vehicles' database. A composite key in SQL can be defined as a combination of multiple columns, and these columns are used to identify all the rows that are involved uniquely.
+
+
+Question 6:
+
+Ans) 
+CREATE TABLE Persons (
+    ID int NOT NULL,
+    FirstName varchar(255),
+    LastName varchar(255) NOT NULL,
+    Age int,
+    primary key ( ID ), #Primary Key 
+    City varchar(255) DEFAULT 'Sandnes', #a column default value,
+    unique (LastName) #a column unique constraint
+);
